@@ -1,0 +1,551 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap');
+/*font-family: 'Merienda', cursive;*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+html, body{
+
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: sans-serif;
+}
+
+.container{
+    min-height: 100vh;
+    width: 100vw ;
+    overflow-x: hidden;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+header .logo {
+    width: 100%;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header div h1{
+    font-size: 2.5em;
+    width: 200px;
+    margin: auto;
+    font-family: 'Merienda', cursive;
+}
+
+header .logo span{
+    color: teal;
+}
+
+header nav{
+    border-top: 1px solid silver;
+    border-bottom: 1px solid silver;
+    width: 100vw;
+    
+}
+
+header nav ul.geral{
+    background-color: silver;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+/*======== Opções normais ======*/
+
+header nav ul.geral li.opcoes ul.sub-op {
+    display: flex;
+    align-items: center;
+}
+
+header nav ul.geral li.opcoes ul.sub-op li a {
+    color: black;
+    margin: 5px 20px;
+    padding: 3px;
+
+}
+
+/*======== Login ======*/
+header nav ul.geral li.login ul.sub-log{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+}
+header nav ul.geral li.login ul.sub-log li {
+    color: black;
+    background-color: teal;
+    color: white;
+    margin: 5px 20px;
+    padding: 7px;
+    font-weight: 800;
+    border-radius: 15px;
+    border: 2px solid white;
+    cursor: pointer;
+
+}
+
+header nav ul.geral li.login ul.sub-log li:hover {
+    border: 3px solid white;
+    box-shadow: 0px 0px 0px 4px teal;
+}
+
+
+/*============= Main =======================*/
+
+section.outdoor{
+    width: 100vw;
+    max-height: 500px;
+    
+
+}
+section.outdoor div.img{
+    width: 100%;
+    max-height: 500px;
+
+}
+
+section.outdoor div.img img{
+    width: 100%;
+    max-height: 500px;
+}
+
+main section h2{
+    color: gray;
+    font-family: sans-serif;
+}
+
+/*========== Section Lista (promoções do dia) ========*/
+
+section.lista1 {
+    padding: 50px 10px;
+    background-color: rgb(242, 241, 241);
+    margin: 0 auto;
+}
+
+section.lista1 h2{
+    text-align: center;
+    font-size: 2em;
+    font-weight: 500;
+}
+
+section.lista1 h2 span{
+    color: blue;
+    font-size: 0.6em;
+    margin-left: 5px;
+}
+
+section.lista1 div.envelopamento{
+
+}
+
+section.lista1 div.organizador {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    height: 440px;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    margin-top: 20px;
+    overflow-x: auto;
+    scrollbar-width: none;  /*Ocultar barra de rolagem Moz*/
+    align-items: flex-start;
+
+
+}
+
+section.lista1 div.organizador::-webkit-scrollbar{ 
+    display: none;  /*Ocultar barra de rolagem Webkit*/
+}
+
+
+
+section.lista1 div.organizador div.sub-org{
+    width: 220px;
+    min-height: 320px;
+    background-color: white;
+    margin: 10px;
+    border: 5px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-shrink: 0;
+    flex-grow: 0;
+    transition: all 0.5s;
+}
+section.lista1 div.organizador div.sub-org img{
+    width: 100%;
+    height: 250px;
+    text-align: center;
+    
+}
+
+section.lista1 div.organizador div.sub-org div.descricao{
+    padding-top: 10px;
+    width: 100%;
+    position: relative;
+}
+section.lista1 div.organizador div.sub-org div.descricao h4{
+    width: 100%;
+    text-align: center;
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+section.lista1 div.organizador div.sub-org div.descricao p {
+    text-align: center;
+}
+span.span{
+    position: absolute;
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    padding-top: 3px;
+    border-radius: 50%;
+    color: teal;
+    font-size: 1.2em;
+    font-weight: 800;
+    right: 0px;
+    top: 33px;
+    border: 2px solid teal;
+    line-height: 18px;
+    cursor: pointer;
+}
+
+span.span.active{
+    transform: rotateX(180deg);
+}
+
+#resumo{
+    display: none;
+    background-color: white;
+    padding-top: 7px;
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+#resumo.active{
+    display: block;
+}
+
+
+
+
+/*================ Section Lista2 [Você pode se interessar] ====*/
+section.lista2 {
+    padding: 0px 10px;
+    background-color: rgb(242, 241, 241);
+    margin: 0 auto;
+}
+
+section.lista2 h2{
+    text-align: center;
+    font-size: 2em;
+    font-weight: 500;
+}
+section.lista2 h2 span{
+    color: blue;
+    font-size: 0.6em;
+    margin-left: 5px;
+}
+section.lista2 div.envelopamento{
+
+}
+
+section.lista2 div.organizador {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    height: 440px;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    margin-top: 20px;
+    overflow-x: auto;
+    scrollbar-width: none;  /*Ocultar barra de rolagem Moz*/
+    align-items: flex-start;
+
+
+}
+
+section.lista2 div.organizador::-webkit-scrollbar{ 
+    display: none;  /*Ocultar barra de rolagem Webkit*/
+}
+
+
+
+section.lista2 div.organizador div.sub-org{
+    width: 220px;
+    min-height: 320px;
+    background-color: white;
+    margin: 10px;
+    border: 5px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-shrink: 0;
+    flex-grow: 0;
+    transition: all 0.5s;
+}
+section.lista2 div.organizador div.sub-org img{
+    width: 100%;
+    height: 250px;
+    text-align: center;
+    
+}
+
+section.lista2 div.organizador div.sub-org div.descricao{
+    padding-top: 10px;
+    width: 100%;
+    position: relative;
+}
+section.lista2 div.organizador div.sub-org div.descricao h4{
+    width: 100%;
+    text-align: center;
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+section.lista2 div.organizador div.sub-org div.descricao p {
+    text-align: center;
+}
+
+
+
+/*============= Section Lista3 [Mais Vendidos]==============*/
+
+section.lista3 {
+    padding: 0px 10px;
+    background-color: rgb(242, 241, 241);
+    margin: 0 auto;
+}
+
+section.lista3 h2{
+    text-align: center;
+    font-size: 2em;
+    font-weight: 500;
+}
+
+section.lista3 h2 span{
+    color: blue;
+    font-size: 0.6em;
+    margin-left: 5px;
+}
+
+section.lista3 div.envelopamento{
+
+}
+
+section.lista3 div.organizador {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    height: 440px;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    margin-top: 20px;
+    overflow-x: auto;
+    scrollbar-width: none;  /*Ocultar barra de rolagem Moz*/
+    align-items: flex-start;
+
+
+}
+
+section.lista3 div.organizador::-webkit-scrollbar{ 
+    display: none;  /*Ocultar barra de rolagem Webkit*/
+}
+
+
+
+section.lista3 div.organizador div.sub-org{
+    width: 220px;
+    min-height: 320px;
+    background-color: white;
+    margin: 10px;
+    border: 5px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-shrink: 0;
+    flex-grow: 0;
+    transition: all 0.5s;
+}
+section.lista3 div.organizador div.sub-org img{
+    width: 100%;
+    height: 250px;
+    text-align: center;
+    
+}
+
+section.lista3 div.organizador div.sub-org div.descricao{
+    padding-top: 10px;
+    width: 100%;
+    position: relative;
+}
+section.lista3 div.organizador div.sub-org div.descricao h4{
+    width: 100%;
+    text-align: center;
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+section.lista3 div.organizador div.sub-org div.descricao p {
+    text-align: center;
+}
+
+
+
+
+
+
+
+@media(max-width:760px){
+
+    /*====== CONFIG BTN NAV =====*/
+    #btn{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 35px;
+        width: 35px;
+        position: absolute;
+        right: 10%;
+        top: 35%;
+        cursor: pointer;
+    }
+
+    #btn div {
+        background-color: black;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        transition: all 0.4s;
+        
+    }
+
+    header #btn.active div.l1 {
+        background-color: black;
+        transform: rotate(45deg) translate(11px, 3px);
+        
+    }
+    
+    header #btn.active div.l2 {
+        background-color: teal;
+        opacity: 0;
+    }
+    
+    
+    header #btn.active div.l3 {
+        background-color: teal;
+        transform: rotate(-45deg) translate(10px, -3px);
+    }
+    
+    /*====== CONFIG NAV =====*/
+
+    header nav{
+        position: absolute;
+        width: 80vw;
+        height: 100vh; 
+        left: 0;
+        top: 0;
+        transform: translateX(-100%);  
+        transition: all 0.3s ease-in-out;    
+    }
+
+    header nav.active{
+        transform: translateX(0%);
+    }
+    
+    header nav ul.geral{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 80vw;
+        height: 100vh;     
+        background-color: black; 
+    }
+    header nav ul.geral li.login{
+        order: 1;
+        width: 100%;
+    }
+    header nav ul.geral li.login ul.sub-log{
+        background-color: black !important;
+        width: 100% !important;
+        height: 120px;
+        padding: 5px 70px;
+
+    }
+
+    header nav ul.geral li.login ul.sub-log li{
+        width: 50%;
+        min-height: 45px;
+        border-radius: 10px;
+        border: 4px solid teal !important;
+        color: white !important;
+        text-align: center;
+        line-height: 22px;
+        margin: 5px !important;
+        background-color: teal;
+        font-weight: 500;
+    }
+
+    header nav ul.geral li.login ul.sub-log li:hover {
+        border: 4px solid white !important;
+        box-shadow: 0px 0px 0px 4px teal;
+    }
+
+
+
+    /*======== Opções normais ======*/
+
+    header nav ul.geral li.opcoes{
+        order: 2;
+        width: 100%;
+        height: 400px;
+        margin-top: 10px;
+    }
+    
+    header nav ul.geral li.opcoes ul.sub-op {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 100%;
+        width: 100%;
+        background-color: cadetblue;
+    }
+    header nav ul.geral li.opcoes ul.sub-op li{
+        height: 23%;
+        width: 100%;
+    }
+    
+    header nav ul.geral li.opcoes ul.sub-op li a {
+        color: black;
+        display: block;
+        background-color: black;
+        color: white;
+        margin: 0px;
+        padding: 3px;
+        height: 100%;
+        width: 100%;
+        text-indent: 60px;
+        line-height: 80px;
+    
+    }
+    
+
+}
