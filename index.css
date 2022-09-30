@@ -12,8 +12,12 @@ html, body{
 
     width: 100%;
     height: 100%;
-    overflow-x: hidden;
     font-family: sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: flex-start;
 }
 
 .container{
@@ -55,10 +59,10 @@ header nav{
 }
 
 header nav ul.geral{
-    background-color: silver;
+    background-color: white;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     height: 60px;
 }
@@ -70,10 +74,25 @@ header nav ul.geral li.opcoes ul.sub-op {
 }
 
 header nav ul.geral li.opcoes ul.sub-op li a {
-    color: black;
+    color: gray;
     margin: 5px 20px;
     padding: 3px;
+    position: relative;
 
+}
+header nav ul.geral li.opcoes ul.sub-op li a::after{
+    content: '';
+    position: absolute;
+    background-color: teal;
+    height: 5px;
+    width: 0%;
+    left: 0;
+    bottom: -7px;
+}
+
+header nav ul.geral li.opcoes ul.sub-op li a:hover::after {
+    width: 100%;
+    transition: all 0.3s;
 }
 
 /*======== Login ======*/
@@ -82,14 +101,16 @@ header nav ul.geral li.login ul.sub-log{
     align-items: center;
     justify-content: center;
     width: 300px;
+    margin-right: 10px;
 }
 header nav ul.geral li.login ul.sub-log li {
     color: black;
     background-color: teal;
     color: white;
-    margin: 5px 20px;
+    margin: 5px;
     padding: 7px;
-    font-weight: 800;
+    width: 210px;
+    text-align: center;
     border-radius: 15px;
     border: 2px solid white;
     cursor: pointer;
@@ -124,6 +145,9 @@ section.outdoor div.img img{
 main section h2{
     color: gray;
     font-family: sans-serif;
+    font-size: 1.6em;
+    font-weight: 500;
+    margin-left: 12px;
 }
 
 /*========== Section Lista (promoções do dia) ========*/
@@ -135,9 +159,7 @@ section.lista1 {
 }
 
 section.lista1 h2{
-    text-align: center;
-    font-size: 2em;
-    font-weight: 500;
+
 }
 
 section.lista1 h2 span{
@@ -220,7 +242,7 @@ span.span{
     right: 0px;
     top: 33px;
     border: 2px solid teal;
-    line-height: 18px;
+    line-height: 19px;
     cursor: pointer;
 }
 
@@ -251,9 +273,8 @@ section.lista2 {
 }
 
 section.lista2 h2{
-    text-align: center;
-    font-size: 2em;
-    font-weight: 500;
+
+
 }
 section.lista2 h2 span{
     color: blue;
@@ -333,9 +354,8 @@ section.lista3 {
 }
 
 section.lista3 h2{
-    text-align: center;
-    font-size: 2em;
-    font-weight: 500;
+
+
 }
 
 section.lista3 h2 span{
@@ -477,36 +497,39 @@ section.lista3 div.organizador div.sub-org div.descricao p {
         justify-content: flex-start;
         width: 80vw;
         height: 100vh;     
-        background-color: black; 
+        background-color: white; 
     }
     header nav ul.geral li.login{
         order: 1;
         width: 100%;
     }
     header nav ul.geral li.login ul.sub-log{
-        background-color: black !important;
+        background-color: transparent !important;
         width: 100% !important;
         height: 120px;
-        padding: 5px 70px;
+        padding: 5px 20px;
+        flex-wrap: nowrap;
+        border-bottom: 1px solid rgb(223, 222, 222);
 
     }
 
     header nav ul.geral li.login ul.sub-log li{
         width: 50%;
-        min-height: 45px;
-        border-radius: 10px;
+        min-height: 50px;
+        border-radius: 40px !important;
         border: 4px solid teal !important;
-        color: white !important;
+        color: teal !important;
         text-align: center;
-        line-height: 22px;
+        line-height: 27px;
         margin: 5px !important;
-        background-color: teal;
+        background-color: white;
         font-weight: 500;
     }
 
     header nav ul.geral li.login ul.sub-log li:hover {
-        border: 4px solid white !important;
-        box-shadow: 0px 0px 0px 4px teal;
+        box-shadow: 0px 0px 0px 4px rgb(209, 215, 215);
+        background-color: teal;
+        color: white !important;
     }
 
 
@@ -516,7 +539,7 @@ section.lista3 div.organizador div.sub-org div.descricao p {
     header nav ul.geral li.opcoes{
         order: 2;
         width: 100%;
-        height: 400px;
+        height: 360px;
         margin-top: 10px;
     }
     
@@ -526,7 +549,6 @@ section.lista3 div.organizador div.sub-org div.descricao p {
         justify-content: space-evenly;
         height: 100%;
         width: 100%;
-        background-color: cadetblue;
     }
     header nav ul.geral li.opcoes ul.sub-op li{
         height: 23%;
@@ -536,15 +558,35 @@ section.lista3 div.organizador div.sub-org div.descricao p {
     header nav ul.geral li.opcoes ul.sub-op li a {
         color: black;
         display: block;
-        background-color: black;
-        color: white;
+        background-color: white;
         margin: 0px;
         padding: 3px;
         height: 100%;
         width: 100%;
         text-indent: 60px;
         line-height: 80px;
+        border-bottom: 1px solid rgb(214, 214, 214);
+        box-shadow: -3px 3px 2px rgb(214, 213, 213);
     
+    }
+
+    header nav ul.geral li.opcoes ul.sub-op li a::after{
+        content: '';
+        position: absolute;
+        background-color: rgba(135, 198, 198, 0.437);
+        height: 100%;
+        width: 0%;
+        left: 0;
+        bottom: 0;
+    }
+    
+    header nav ul.geral li.opcoes ul.sub-op li a:hover::after {
+        width: 100%;
+        transition: all 0.3s;
+    }
+    header nav ul.geral li.opcoes ul.sub-op li a:hover{
+        box-shadow: none;
+        
     }
     
 
