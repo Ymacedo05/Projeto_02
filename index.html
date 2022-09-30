@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="componentes.css">
 </head>
 <body>
     
@@ -34,8 +35,8 @@
 
                     <li class="login">
                         <ul class="sub-log">
-                            <li>Entre</li>
-                            <li>Cadastre-se</li>
+                            <li id="logar">Entre</li>
+                            <li id="cadastrar">Cadastre-se</li>
                         </ul>
                     </li>
                 </ul> <!-- Fim geral-->
@@ -330,8 +331,35 @@
                 </div>
             </section>
 
-            <section>
+            <section id="componentes">
+                <div id="login" class="cont">
+                    <div class="sub-cont" id="sub">
 
+                        <h2>Login</h2>
+
+                        <div class="form">
+                            <input type="text" id="user">
+                            <label for="user">User</label>
+                        </div>
+
+                        <div class="form">
+                            <input type="password" id="password">
+                            <label for="password">Password</label>
+                        </div>
+
+                        <div class="form">
+                            <input type="checkbox" id="check">
+                            <label for="check">Lembrar dados</label>
+                        </div>
+
+                        <button class="btn1">Acessar</button>
+                        <p>Não possuí uma conta? <span>Cadastre-se</span></p>
+
+                        <button class="btn2" id="btn-x">X</button>
+
+                        
+                    </div>
+                </div>
             </section>
 
 
