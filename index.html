@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="componentes.css">
+    <script src="https://kit.fontawesome.com/94f1d98c32.js" crossorigin="anonymous"></script>
 </head>
 <body>
     
@@ -338,12 +339,12 @@
                         <h2>Login</h2>
 
                         <div class="form">
-                            <input type="text" id="user">
+                            <input type="text" id="user" required="">
                             <label for="user">User</label>
                         </div>
 
                         <div class="form">
-                            <input type="password" id="password">
+                            <input type="password" id="password" required="">
                             <label for="password">Password</label>
                         </div>
 
@@ -353,19 +354,66 @@
                         </div>
 
                         <button class="btn1">Acessar</button>
-                        <p>Não possuí uma conta? <span>Cadastre-se</span></p>
+                        <p>Não possuí uma conta? <span onclick="retornarCadastro()">Cadastre-se</span></p>
 
                         <button class="btn2" id="btn-x">X</button>
 
                         
                     </div>
                 </div>
+
+                <div id="cadas" class="cont">
+                    <div class="sub-cont" id="sub">
+
+                        <h2>Crie sua conta</h2>
+ 
+                        <div class="form">
+                            <input type="text" id="nome" required="" class="info-conta">
+                            <label for="nome">Nome</label>
+                        </div>
+
+                        <div class="form">
+                            <input type="text" id="senha" required="" class="info-conta">
+                            <label for="senha">Senha</label>
+                        </div>
+
+                        <div class="form">
+                            <input type="number" id="idade" required="" class="info-conta">
+                            <label for="idade">Idade</label>
+                        </div>
+
+                        <div class="form">
+                            <input type="text" id="e-mail" required="" class="info-conta">
+                            <label for="e-mail">E-mail</label>
+                        </div>
+
+                        <div class="btns">
+                            <button class="btn btn1" onclick="criarUser()">Prosseguir</button>
+                            <button class="btn btn2" onclick="retornarLogin()"> < Login </button>
+                        </div>
+                        
+
+                        <button class="btn2" id="btn-y">X</button>
+                     
+                    </div>
+                </div>
+
+                <div id="criarUsuario" >
+                    <div class="sub-cont">
+
+                        <h2>Conta criada! </h2>
+                        <i class="fa-regular fa-circle-check"></i>
+                    </div>
+                </div>
+
             </section>
 
 
         </main>
     </div>
 
+    
     <script src="index.js"></script>
+    
 </body>
 </html>

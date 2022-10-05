@@ -5,13 +5,23 @@
 */
 @keyframes ani {
     0%{
-      transform: translateY(-90px);
+      transform: translateY(-100px);
     }
     100%{
         transform: translateY(0);
     }
 }
 
+@keyframes ani2 {
+    0%{
+      transform: translateY(100px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+/*================ Componente Login =========== */
 #login.cont{
     position: absolute;
     top: 0;
@@ -35,8 +45,8 @@
 #login .sub-cont{
     background-color: white;
     border: 2px solid teal;
-    width: 300px;
-    height: 430px;
+    width: 350px;
+    height: 480px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -52,7 +62,7 @@
 }
 
 #login .sub-cont .form{
-    margin-bottom: 10px;
+    margin-bottom: 18px;
     position: relative;
     width: 90%;
 }
@@ -63,6 +73,7 @@
     border: 0.5px solid silver;
     font-size: 1.2em;
     text-indent: 12px;
+    
 
 }
 #login .sub-cont .form label:not([for="check"]){
@@ -71,6 +82,7 @@
     top: 12px;
     color: gray;
     background: white;
+    transition: all 0.4s;
     
 }
 
@@ -110,4 +122,184 @@
     right: -15px;
     top: -15px;
     
+}
+
+/*================ Componente Cadastro =========== */
+
+#cadas {
+    position: absolute;
+    background-color: rgba(229, 226, 226, 0.644);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+#cadas.active{
+    display: flex;
+}
+
+#cadas.active .sub-cont{
+    animation: ani2 0.5s;
+}
+
+#cadas .sub-cont {
+    background-color: white;
+    border: 2px solid teal;
+    margin-top: -80px;
+    width: 340px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px 0px 20px 0px;
+    position: relative;
+}
+#cadas .sub-cont h2{
+    margin-top: 20px;
+    margin-bottom: 35px;
+    font-size: 2em;
+    color: teal;
+}
+
+#cadas .sub-cont .form{
+    width: 90%;
+    position: relative;
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+#cadas .sub-cont .form input {
+
+    height: 45px;
+    width: 100%;
+    border: 2px solid rgb(221, 220, 220);
+    border-radius: 7px;
+    font-size: 1.2em;
+    text-indent: 15px;
+}
+
+#cadas .sub-cont .form label{
+    position: absolute;
+    left: 20px;
+    top: 14px;
+    color: rgb(158, 157, 157);
+    transition: all 0.4s;
+    
+}
+
+#cadas .sub-cont .btn {
+    width: 180px;
+    height: 45px;
+    border-radius: 20px;
+    font-size: 1em;
+}
+
+#cadas .sub-cont .btns{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 150%;
+    padding-right: 20px;
+    padding-left: 5px;
+    bottom: -100px;
+    
+}
+
+#cadas .sub-cont .btns .btn1{
+    order: 2;
+    background-color: teal;
+    color: white;
+    border: 2px solid white;
+    box-shadow: 5px 5px 5px  silver ;
+}
+
+#cadas .sub-cont .btns .btn2{
+    color: teal;
+    border: 2px solid teal;
+    background-color: white;
+    box-shadow: 5px 5px 5px  silver;
+}
+
+#cadas .sub-cont #btn-y{
+    position: absolute;
+    display: block;
+    font-size: 1.2em;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: rgb(78, 210, 210);
+    box-shadow: 0px 0px 0px 3px rgb(78, 210, 210);;
+    color: white;
+    right: -15px;
+    top: -15px;
+}
+
+
+
+/*========== Required / Valid ================ */
+
+#componentes input:focus {
+    border: 2px solid teal !important;
+    box-shadow: 2px 2px 2px rgb(222, 221, 221);
+}
+
+#componentes #login input:focus ~ label:not([for="check"]), #componentes input:valid ~ label:not([for="check"]) {
+
+    top: -11px;
+    color: black !important;
+    padding: 0px 3px;
+    font-size: 0.8em;
+}
+
+#componentes #cadas input:focus ~ label:not([for="check"]), #componentes input:valid ~ label:not([for="check"]) {
+
+    top: -11px;
+    color: black !important;
+    padding: 1px 3px;
+    font-size: 0.8em;
+    background-color: white;
+}
+
+/*================ Componente Cadastro =========== */
+#criarUsuario {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(229, 226, 226, 0.644);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#criarUsuario.active{
+    display: flex;
+}
+
+#criarUsuario .sub-cont{
+
+    background-color: teal;
+    width: 300px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid white;
+    box-shadow: 4px 4px 4px rgb(166, 166, 166);
+
+}
+
+#criarUsuario .sub-cont h2{
+    color: white;
+    
+}
+
+#criarUsuario .sub-cont i {
+    font-size: 2em;
+    color: white;
+    margin-left: 10px;
+
 }
