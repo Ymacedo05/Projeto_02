@@ -132,6 +132,7 @@
     width: 100vw;
     height: 100vh;
     top: 0;
+    left: 0;
     display: none;
     justify-content: center;
     align-items: center;
@@ -200,10 +201,11 @@
     position: absolute;
     display: flex;
     justify-content: space-between;
-    width: 150%;
+    width: 100vw;
     padding-right: 20px;
     padding-left: 5px;
     bottom: -100px;
+    border: 2px solid red;
     
 }
 
@@ -263,7 +265,7 @@
     background-color: white;
 }
 
-/*================ Componente Cadastro =========== */
+/*================ Componente confim. Cadastro =========== */
 #criarUsuario {
     position: absolute;
     top: 0;
