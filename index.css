@@ -143,12 +143,32 @@ section.outdoor div.img img{
     max-height: 500px;
 }
 
+/*=============== Configurações main Gerais ========== */
 main section h2{
     color: gray;
     font-family: sans-serif;
     font-size: 1.6em;
     font-weight: 500;
     margin-left: 12px;
+}
+span.span.active{
+    transform: rotateX(180deg);
+}
+
+#resumo{
+    display: none;
+    background-color: white;
+    padding-top: 7px;
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+#resumo.active{
+    display: block;
+}
+
+div.sub-org:hover:not(div.sub-org.cancel) div.descricao #resumo{
+    display: block !important;
 }
 
 /*========== Section Lista (promoções do dia) ========*/
@@ -232,7 +252,7 @@ section.lista1 div.organizador div.sub-org div.descricao p {
 }
 span.span{
     position: absolute;
-    display: inline-block;
+    display: none;
     height: 25px;
     width: 25px;
     padding-top: 3px;
@@ -247,21 +267,6 @@ span.span{
     cursor: pointer;
 }
 
-span.span.active{
-    transform: rotateX(180deg);
-}
-
-#resumo{
-    display: none;
-    background-color: white;
-    padding-top: 7px;
-    padding-bottom: 5px;
-    width: 100%;
-}
-
-#resumo.active{
-    display: block;
-}
 
 
 
@@ -479,6 +484,7 @@ section.lista3 div.organizador div.sub-org div.descricao p {
 
     header nav{
         position: absolute;
+        z-index: 999;
         width: 80vw;
         height: 100vh; 
         left: 0;
@@ -583,7 +589,7 @@ section.lista3 div.organizador div.sub-org div.descricao p {
     
     header nav ul.geral li.opcoes ul.sub-op li a:hover::after {
         width: 100%;
-        transition: all 0.3s;
+        transition: all 0.5s ease-in-out;
     }
     header nav ul.geral li.opcoes ul.sub-op li a:hover{
         box-shadow: none;
@@ -591,4 +597,13 @@ section.lista3 div.organizador div.sub-org div.descricao p {
     }
     
 
+}
+
+@media(max-width:500px) {
+    main span.span{
+        display: inline-block;
+    }
+    #produto[disabled]:hover {
+        
+    }
 }

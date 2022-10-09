@@ -1,5 +1,31 @@
 
-// Menu Mobile
+// ================ Remoção de hover ================
+function correcao(){
+    //Essa função é chamada quando o documento carregar e sempre que a tela for redimensionada e quando a tela for menor que 501px cancela o hover e o inclui quando for maior. 
+
+    let largura = window.innerWidth
+    console.log(largura)
+
+    let alvos = document.querySelectorAll(".sub-org")
+
+    if(largura < 501) {
+        
+        alvos.forEach( (x) => {
+            x.classList.add("cancel")
+        })
+    } else {
+        alvos.forEach( (x) => {
+            x.classList.remove("cancel")
+        })
+    }
+    
+}
+correcao()
+
+
+
+
+// ================ Menu Mobile ==================
 let btn = document.getElementById("btn")
 let nav = document.getElementById("nav")
 
@@ -25,7 +51,7 @@ function mouse(y){
     span[y].classList.toggle("active")
 }
 
-// Componente Login / Cadastrar
+// ============== Componente Login / Cadastrar ==========
 let logar = document.getElementById("logar")
 logar.addEventListener("click", (x) => addComponente(x))
 

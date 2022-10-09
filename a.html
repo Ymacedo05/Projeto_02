@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        #container{
+            background-color: cadetblue;
+            position: relative;
+            min-height: 30px;
+            width: 100%;
+            transition: all 0.4s;
+
+        }
+
+        #btn{
+            background-color: cadetblue;
+            color: white;
+            border: 2px solid cadetblue;
+            padding: 3px;
+            position: absolute;
+            left: 45%;
+            top: -26px;
+        }
+        
+
+        #conteudo{
+            padding: 10px 5px;
+            display: none;
+        }
+
+        #btn:hover ~ #sub-cont #conteudo{
+            display: block;
+        }
+
+        @media(max-width:500px) {
+            #btn[disabled]:hover ~ #sub-cont #conteudo{
+            display: block;
+        }
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div id="container">
+        <button id="btn">Click em mim</button>
+        <div id="sub-cont">
+            <div id="conteudo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus consectetur maiores accusantium laboriosam nam iusto incidunt quas minus velit id? Provident nihil illum sint nobis veritatis eos accusantium eligendi nesciunt?</div>
+        </div>
+    </div>
+</body>
+</html>
